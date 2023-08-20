@@ -6,7 +6,7 @@ def test_pairs_that_sum_5():
 
     result = pairs_that_sum(numbers_arr, target_value)
 
-    expected_result = [(3, 2)]
+    expected_result = [(2, 3)]
     assert result == expected_result
 
 def test_pairs_that_sum_12():
@@ -15,7 +15,7 @@ def test_pairs_that_sum_12():
 
     result = pairs_that_sum(numbers_arr, target_value)
 
-    expected_result = [(12, 0), (16, -4), (7, 5)]
+    expected_result = [(0, 12), (-4, 16), (5, 7)]
     assert result == expected_result
 
 def test_strings_in_array():
@@ -24,7 +24,7 @@ def test_strings_in_array():
 
     result = pairs_that_sum(numbers_arr, target_value)
 
-    expected_result = 'There is invalid data types in the array, please add only integer numbers'
+    expected_result = 'There are invalid data types in the array. Please add only integer numbers'
     assert result == expected_result
 
 def test_no_pairs_sum():
@@ -51,5 +51,14 @@ def test_pairs_float_numbers():
 
     result = pairs_that_sum(numbers_arr, target_value)
 
-    expected_result = 'There is invalid data types in the array, please add only integer numbers'
+    expected_result = 'There are invalid data types in the array. Please add only integer numbers'
+    assert result == expected_result
+
+def test_pairs_that_sum_repetitive_numbers():
+    numbers_arr = [1, 1, 1, 1, 1]
+    target_value = 2
+
+    result = pairs_that_sum(numbers_arr, target_value)
+
+    expected_result = [(1, 1)]
     assert result == expected_result
