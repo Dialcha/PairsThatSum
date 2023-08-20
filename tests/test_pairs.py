@@ -1,4 +1,4 @@
-from pairs import pairs_that_sum
+from pairs.pairs import pairs_that_sum
 
 def test_pairs_that_sum_5():
     numbers_arr = [1, 2, 3]
